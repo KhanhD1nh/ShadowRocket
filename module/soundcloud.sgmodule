@@ -1,0 +1,11 @@
+#!url=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/moudle/soundcloud.sgmodule
+#!name=Locket Gold
+#!desc=By: KhanhDinh03
+
+[Script]
+
+SoundCloudGo+=type=http-response,pattern=https://api-mobile.soundcloud.com/configuration/ios,requires-body=1,script-path=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/js/soundcloud.js
+
+[MITM]
+
+hostname= %APPEND% api-mobile.soundcloud.com
