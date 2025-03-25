@@ -1,0 +1,13 @@
+#!url=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/module/picsart.sgmodule
+#!name=Picsart
+#!desc=By: KhanhDinh03
+
+
+[Header Rewrite]
+^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json header-del if-none-match
+
+[Script]
+Picsart = type=http-response,pattern=^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/js/picsart.js
+
+[MITM]
+hostname = %APPEND% api.picsart.c*, api.meiease.c*
