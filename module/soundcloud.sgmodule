@@ -1,5 +1,5 @@
 #!url=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/moudle/soundcloud.sgmodule
-#!name=Locket Gold
+#!name=SoundCloudGo+
 #!desc=By: KhanhDinh03
 
 [Script]
@@ -8,4 +8,4 @@ SoundCloudGo+=type=http-response,pattern=https://api-mobile.soundcloud.com/confi
 
 [MITM]
 
-hostname= %APPEND% api-mobile.soundcloud.com
+hostname = %APPEND% api-mobile.soundcloud.com
