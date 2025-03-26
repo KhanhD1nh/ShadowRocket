@@ -3,7 +3,7 @@
 #!desc=By: KhanhDinh03
 
 
-[URL Rewrite]
+[Header Rewrite]
 ^https:\/\/spclient\.wg\.spotify\.com\/user-customization-service\/v1\/customize$ header-del if-none-match
 
 [Script]
