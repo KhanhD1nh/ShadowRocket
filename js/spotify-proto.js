@@ -3865,6 +3865,7 @@ let protobuf;
         [16]
     );
 })();
+
 const spotifyJson = {
     options: { java_package: "com.smile.spotify.model" },
     nested: {
@@ -4004,6 +4005,11 @@ const spotifyJson = {
 const resStatus = $response.status ? $response.status : $response.statusCode;
 if (resStatus !== 200) {
     console.log(`$response.status is not 200: ${resStatus}`);
+    $notification.post(
+        "Spotify Unlock Premium",
+        "Response status code:",
+        resStatus
+    );
     $done({});
 } else {
     const url = $request.url;
@@ -4024,7 +4030,10 @@ if (resStatus !== 200) {
                 .accountAttributesSuccess.accountAttributes;
         processMapObj(accountAttributesMapObj);
         body = bootstrapResponseType.encode(bootstrapResponseObj).finish();
-        console.log("bootstrap");
+        $notification.post(
+            "bootstrap",
+            "Spotify Unlock Premium",
+        );
     } else if (
         url.includes("user-customization-service/v1/customize") &&
         method === postMethod
@@ -4032,12 +4041,16 @@ if (resStatus !== 200) {
         let ucsResponseWrapperType =
             protobuf.Root.fromJSON(spotifyJson).lookupType("UcsResponseWrapper");
         let ucsResponseWrapperMessage = ucsResponseWrapperType.decode(binaryBody);
+        console.log(ucsResponseWrapperMessage);
         accountAttributesMapObj =
             ucsResponseWrapperMessage.success.accountAttributesSuccess
                 .accountAttributes;
         processMapObj(accountAttributesMapObj);
         body = ucsResponseWrapperType.encode(ucsResponseWrapperMessage).finish();
-        console.log("customize");
+        $notification.post(
+            "customize",
+            "Spotify Unlock Premium",
+        );
     } else {
         $notification.post(
             "Spotify Unlock Premium",
