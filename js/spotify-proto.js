@@ -4033,7 +4033,7 @@
             $notification.post(
                 "bootstrap",
                 "Spotify Unlock Premium",
-                bootstrapResponseType
+                JSON.stringify(bootstrapResponseType) // Chuyển thành chuỗi JSON
             );
         } else if (
             url.includes("user-customization-service/v1/customize") &&
