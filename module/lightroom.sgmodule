@@ -1,10 +1,10 @@
-#!url=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/module/lightroom.sgmodule
+#!url=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/module/lightroom.sgmodule
 #!name=Lightroom
-#!desc=By: KhanhDinh03
+#!desc=By: KhanhD1nh
 
 
 [Script]
-Lightroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v\d\/accounts,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/js/lightroom.js,script-update-interval=-1
+Lightroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v\d\/accounts,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/js/lightroom.js,script-update-interval=-1
 
 [MITM]
 hostname=%APPEND% photos.adobe.io

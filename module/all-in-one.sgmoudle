@@ -1,6 +1,6 @@
-#!url=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/module/camscanner.sgmodule
+#!url=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/module/camscanner.sgmodule
 #!name=All in one
-#!desc=By: KhanhDinh03
+#!desc=By: KhanhD1nh
 
 
 [General]
@@ -26,29 +26,29 @@ DOMAIN-SUFFIX,googleads.g.doubleclick.net,REJECT
 
 [Script]
 # Camscanner Gold
-Camscanner = requires-body=1,script-path=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/js/camscanner.js,type=http-response,pattern= https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\?
+Camscanner = requires-body=1,script-path=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/js/camscanner.js,type=http-response,pattern= https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\?
 
 ########### Locket Gold ###########
-revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/js/locket.js, requires-body=true, max-size=-1, timeout=60
+revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/js/locket.js, requires-body=true, max-size=-1, timeout=60
 
-deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/js/locket_delete_header.js, timeout=60
+deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/js/locket_delete_header.js, timeout=60
 
 ########### SoundCloudGo ###########
-SoundCloudGo+ = type=http-response,pattern=https://api-mobile.soundcloud.com/configuration/ios,requires-body=1,script-path=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/js/soundcloud.js
+SoundCloudGo+ = type=http-response,pattern=https://api-mobile.soundcloud.com/configuration/ios,requires-body=1,script-path=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/js/soundcloud.js
 
 ########### Spotify Premium ###########
-spotify-json = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/js/spotify-json.js
+spotify-json = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/js/spotify-json.js
 
-spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,script-path=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10
+spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,script-path=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10
 
 ########### Youtube Premium ###########
-youtube = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting),requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/js/youtube.js
+youtube = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting),requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/js/youtube.js
 
-youtube-request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine=jsc,script-path=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/js/youtube.request.js
+youtube-request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine=jsc,script-path=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/js/youtube.request.js
 
-youtube-response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{jsc}}},script-path=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/js/youtube.response.js,argument="{"lyricLang":"{{{vi}}}","captionLang":"{{{vi}}}","blockUpload":{{{true}}},"blockImmersive":{{{true}}},"debug":{{{false}}}}"
+youtube-response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{jsc}}},script-path=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/js/youtube.response.js,argument="{"lyricLang":"{{{vi}}}","captionLang":"{{{vi}}}","blockUpload":{{{true}}},"blockImmersive":{{{true}}},"debug":{{{false}}}}"
 
-youtube-proto = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next),requires-body=1,binary-body-mode=1,max-size=2097152,script-path=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/js/youtube.proto.js
+youtube-proto = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next),requires-body=1,binary-body-mode=1,max-size=2097152,script-path=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/js/youtube.proto.js
 
 
 [MITM]

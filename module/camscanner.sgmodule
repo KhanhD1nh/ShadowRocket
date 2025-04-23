@@ -1,10 +1,10 @@
-#!url=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/module/camscanner.sgmodule
+#!url=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/module/camscanner.sgmodule
 #!name=CamScanner
-#!desc=By: KhanhDinh03
+#!desc=By: KhanhD1nh
 
 
 [Script]
-Camscanner = requires-body=1,script-path=https://raw.githubusercontent.com/KhanhDinh03/ShadowRocket/refs/heads/main/js/camscanner.js,type=http-response,pattern= https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\?
+Camscanner = requires-body=1,script-path=https://raw.githubusercontent.com/KhanhD1nh/ShadowRocket/refs/heads/main/js/camscanner.js,type=http-response,pattern= https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\?
 
 [MITM]
 hostname = %APPEND% ap*.intsig.net
