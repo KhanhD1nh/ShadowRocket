@@ -15,13 +15,13 @@ var subscriptions = {
     expires_date: "2099-12-18T01:04:17Z",
     grace_period_expires_date: null,
     unsubscribe_detected_at: null,
-    original_purchase_date: "2024-04-12T01:04:18Z",
-    purchase_date: "2024-04-12T01:04:17Z",
+    original_purchase_date: "2003-10-16T13:00:00Z",
+    purchase_date: "2003-10-16T13:00:00Z",
     store: "app_store",
   },
   entitlements = {
     grace_period_expires_date: null,
-    purchase_date: "2024-04-12T01:04:17Z",
+    purchase_date: "2003-10-16T13:00:00Z",
     product_identifier: "com.khanhdinh.premium.yearly",
     expires_date: "2099-12-18T01:04:17Z",
   };
