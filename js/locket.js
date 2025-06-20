@@ -7,7 +7,7 @@ var ua = $request.headers["User-Agent"] || $request.headers["user-agent"],
   obj = JSON.parse($response.body);
 obj.Attention =
   "Chúc mừng bạn! Vui lòng không bán hoặc chia sẻ cho người khác!";
-var locket02 = {
+var subscriptions = {
     is_sandbox: !1,
     ownership_type: "PURCHASED",
     billing_issues_detected_at: null,
@@ -19,7 +19,7 @@ var locket02 = {
     purchase_date: "2024-04-12T01:04:17Z",
     store: "app_store",
   },
-  locket01 = {
+  entitlements = {
     grace_period_expires_date: null,
     purchase_date: "2024-04-12T01:04:17Z",
     product_identifier: "com.khanhdinh.premium.yearly",
@@ -29,12 +29,13 @@ const match = Object.keys(mapping).find((e) => ua.includes(e));
 if (match) {
   let [e, s] = mapping[match];
   s
-    ? ((locket01.product_identifier = s),
-      (obj.subscriber.subscriptions[s] = khanhdinh))
+    ? ((entitlements.product_identifier = s),
+      (obj.subscriber.subscriptions[s] = subscriptions))
     : (obj.subscriber.subscriptions["com.khanhdinh.premium.yearly"] =
-        khanhdinh),
-    (obj.subscriber.entitlements[e] = locket01);
+        subscriptions),
+    (obj.subscriber.entitlements[e] = entitlements);
 } else
-  (obj.subscriber.subscriptions["com.khanhdinh.premium.yearly"] = khanhdinh),
-    (obj.subscriber.entitlements.pro = locket01);
+  (obj.subscriber.subscriptions["com.khanhdinh.premium.yearly"] =
+    subscriptions),
+    (obj.subscriber.entitlements.pro = entitlements);
 $done({ body: JSON.stringify(obj) });
